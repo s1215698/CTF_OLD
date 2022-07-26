@@ -1,7 +1,12 @@
+#coding=utf-8
 import json
 import struct
 import gmpy2
 
+#以下情形可考慮使用
+#1.加密指數e非常小
+#2.一份明文使用不同的模數n，相同的加密指數e進行多次加密
+#3.可以拿到每一份加密後的密文和對應的模數n、加密指數e
 
 file = open("C:\ctf_share\enc.txt","r")
 data = json.load(file)
