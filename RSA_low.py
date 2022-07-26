@@ -1,8 +1,9 @@
 import json
+import struct
 import gmpy2
-from pycryptodome.lib.Crypto.Util.number import long_to_bytes
 
-file = open("C:\攻防\enc.txt", "r")
+
+file = open("C:\ctf_share\enc.txt","r")
 data = json.load(file)
 def attack(list):
     def extended_gcd(a, b):
@@ -104,5 +105,5 @@ for i in data:
     list.append((c, n))
 
 
-s = long_to_bytes(attack(list))
+print (long_to_bytes(attack(list)))
 
