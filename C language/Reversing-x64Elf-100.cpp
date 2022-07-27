@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char** argv) {
 	
 	char v3[3][8]={"Dufhbmf","pG`imos","ewUglpt"};
-	char a1[264];	
+	string a1;  
 	
 	for ( int i = 0; i <= 11; ++i )
   {
