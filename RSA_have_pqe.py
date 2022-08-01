@@ -7,8 +7,7 @@
 
 import gmpy2
 import libnum
-
-
+from Crypto.Util.number import *
 
 
 
@@ -24,6 +23,6 @@ c=0x7fe1a4f743675d1987d25d38111fae0f78bbea6852cba5beda47db76d119a3efe24cb04b9449
 
 d=gmpy2.invert(e,(p-1)*(q-1))
 
-m=pow(c,d,n)
+m=long_to_bytes(pow(c,d,n))
 
-print libnum.n2s(m)
+print m
